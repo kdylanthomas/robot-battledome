@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robot Battledome</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+	<section id="robot-selection">
+		<button class="robot" id="r2d2">R2D2</button>
+		<button class="robot" id="walle">Wall-E</button>
+		<button class="robot" id="bender">Bender</button>
+		<button class="robot" id="c3po">C3PO</button>
+		<button class="robot" id="watson">Watson</button>
+		<button class="robot" id="hal">HAL</button>
+		<button id="choose-weapon">Choose a weapon...</button>
+	</section>
+
+	<section id="weapon-selection">
+		<button class="weapon" id="lasergun">Laser Gun</button>
+		<button class="weapon" id="boomerang">Electric Boomerang</button>
+		<button class="weapon" id="throwing-stars">Carbon Fiber Throwing Stars</button>
+		<button class="weapon" id="flamethrower">Flamethrower</button>
+		<button class="weapon" id="giant-magnet">Giant Magnet</button>
+		<button class="weapon" id="mayo">Mayonnaise</button>
+		<button id="choose-mod">Choose a modification...</button>
+	</section>
+	<section id="mod-selection">
+		<button class="mod" id="invisibility-cloak">Invisibility Cloak</button>
+		<button class="mod" id="wheelie-shoes">Wheelie Shoes</button>
+		<button class="mod" id="gauntlet">Carbon Fiber Gauntlet</button>
+		<button class="mod" id="ram-upgrade">RAM Upgrade</button>
+		<button class="mod" id="immunity-potion">Immunity Potion</button>
+		<button class="mod" id="titanium-armor">Titanium Armor</button>
+		<button id="define-player2">Create second player</button>
+		<button id="begin-battle">BEGIN BATTLE</button>
+	</section>
+	<section id="battle-view">
+		<div class="row">
+			<div class="col-md-4" id="player1">Player 1</div>
+			<div class="col-md-4" id="battleground"></div>
+			<div class="col-md-4" id="player2">Player 2</div>
+		</div>
+	</section>
+
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="js/robots.js"></script>
+	<script src="js/weapons.js"></script>
+	<script src="js/mods.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
+
+

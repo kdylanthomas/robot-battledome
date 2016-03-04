@@ -1,0 +1,11 @@
+.hidden {
+	display: none;
+}
+
+#battleground {
+	text-align: center;
+}
+
+#game-over {
+	font-weight: strong;
+}
