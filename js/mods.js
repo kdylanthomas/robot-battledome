@@ -8,8 +8,6 @@ function Modification (name) {
 	this.benefit = null;
 }
 
-// idea--roll die, if threshold >= rolled #, attack is evaded
-
 function InvisibilityCloak () {
 	this.benefit = "evasion";
 	this.evasionThreshold = 3;

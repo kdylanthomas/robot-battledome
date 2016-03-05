@@ -9,6 +9,7 @@ function Robot (type) {
 	this.modification = null;
 	this.weapon = null;
 	this.health = 0;
+	this.isEquipped = false;
 }
 
 // Motorized Robots
@@ -18,14 +19,16 @@ function Motorized (name) {
 Motorized.prototype = new Robot("Motorized");
 
 function R2D2 () {
-	// health between 50-80
-	this.initialHealth = Math.floor(Math.random() * (81 - 50) + 50);
+	this.maxHealth = 80;
+	this.minHealth = 60;
+	this.image = `img/r2d2.png`;
 }
 R2D2.prototype = new Motorized("R2D2");
 
 function WallE () {
-	// health between 55-70
-	this.initialHealth = Math.floor(Math.random() * (71 - 55) + 55);
+	this.maxHealth = 70;
+	this.minHealth = 55;
+	this.image = `img/walle.png`;
 }
 WallE.prototype = new Motorized("Wall-E");
 
@@ -37,16 +40,16 @@ function Bipedal (name) {
 Bipedal.prototype = new Robot("Bipedal");
 
 function Bender () {
-	// health between 40-70
-	this.initialHealth = Math.floor(Math.random() * (71 - 40) + 40);
-
+	this.maxHealth = 70;
+	this.minHealth = 40;
+	this.image = `img/bender.png`;
 }
 Bender.prototype = new Bipedal("Bender");
 
 function C3PO () {
-	// health between 60-90
-	this.initialHealth = Math.floor(Math.random() * (91 - 60) + 60);
-
+	this.maxHealth = 90;
+	this.minHealth = 60;
+	this.image = `img/c3po.png`;
 }
 C3PO.prototype = new Bipedal("C3PO");
 
@@ -59,14 +62,16 @@ Supercomputer.prototype = new Robot("Supercomputer");
 
 
 function Watson () {
-	// health between 55-85
-	this.initialHealth = Math.floor(Math.random() * (96 - 55) + 55);
+	this.maxHealth = 95;
+	this.minHealth = 55;
+	this.image = `img/watson.png`;
 }
 Watson.prototype = new Supercomputer("Watson");
 
 function Hal () {
-	// health between 45-75
-	this.initialHealth = Math.floor(Math.random() * (76 - 45) + 45);
+	this.maxHealth = 75;
+	this.minHealth = 45;
+	this.image = `img/hal.gif`;
 }
 Hal.prototype = new Supercomputer("HAL");
 

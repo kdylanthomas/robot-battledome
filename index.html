@@ -3,43 +3,148 @@
 <head>
 	<title>Robot Battledome</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-	<section id="robot-selection">
-		<button class="robot" id="r2d2">R2D2</button>
-		<button class="robot" id="walle">Wall-E</button>
-		<button class="robot" id="bender">Bender</button>
-		<button class="robot" id="c3po">C3PO</button>
-		<button class="robot" id="watson">Watson</button>
-		<button class="robot" id="hal">HAL</button>
-		<button id="choose-weapon">Choose a weapon...</button>
+	<section id="start-page">
+		<div id="start-container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h1>Welcome to Robot Battledome!</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-md-offset-5">
+					<button id="begin-game" class="btn next-screen">START</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="robot-selection" class="user-selections">
+		<div class="row header">
+			<h1>Choose Your Robot!</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-4 motorized">
+				<h2>Motorized</h2>
+				<div class="select-container">
+					<button class="btn robot-btn" id="r2d2">R2D2</button>
+				</div>
+				<div class="select-container">
+					<button class="btn robot-btn" id="walle">Wall-E</button>
+				</div>
+			</div>
+			<div class="col-md-4 bipedal">
+				<h2>Bipedal</h2>
+				<div class="select-container">
+					<button class="btn robot-btn" id="bender">Bender</button>
+				</div>
+				<div class="select-container">
+					<button class="btn robot-btn" id="c3po">C3PO</button>
+				</div>
+			</div>
+			<div class="col-md-4 supercomputer">
+				<h2>Supercomputer</h2>
+				<div class="select-container">
+					<button class="btn robot-btn" id="watson">Watson</button>
+				</div>
+				<div class="select-container">
+					<button class="btn robot-btn" id="hal">HAL</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5">
+				<button id="choose-weapon" class="btn next-screen">Choose a weapon...</button>
+			</div>
+		</div>
 	</section>
 
-	<section id="weapon-selection">
-		<button class="weapon" id="lasergun">Laser Gun</button>
-		<button class="weapon" id="boomerang">Electric Boomerang</button>
-		<button class="weapon" id="throwing-stars">Carbon Fiber Throwing Stars</button>
-		<button class="weapon" id="flamethrower">Flamethrower</button>
-		<button class="weapon" id="giant-magnet">Giant Magnet</button>
-		<button class="weapon" id="mayo">Mayonnaise</button>
-		<button id="choose-mod">Choose a modification...</button>
+	<section id="weapon-selection" class="user-selections">
+		<div class="row header">
+			<h1>Choose Your Weapon!</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-3">
+				<div class="select-container">
+					<button class="btn weapon-btn" id="lasergun">Laser Gun</button>
+				</div>
+				<div class="select-container">
+					<button class="btn weapon-btn" id="boomerang">Electric Boomerang</button>
+				</div>
+				<div class="select-container">
+					<button class="btn weapon-btn" id="throwing-stars">Throwing Stars</button>
+				</div>
+			</div>
+			<div class="col-md-2 col-md-offset-2">
+				<div class="select-container">
+					<button class="btn weapon-btn" id="flamethrower">Flamethrower</button>
+				</div>
+				<div class="select-container">
+					<button class="btn weapon-btn" id="giant-magnet">Giant Magnet</button>
+				</div>
+				<div class="select-container">
+					<button class="btn weapon-btn" id="mayo">Mayonnaise</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5">
+				<button id="choose-mod" class="btn next-screen">Choose a modification...</button>
+			</div>
+		</div>
 	</section>
-	<section id="mod-selection">
-		<button class="mod" id="invisibility-cloak">Invisibility Cloak</button>
-		<button class="mod" id="wheelie-shoes">Wheelie Shoes</button>
-		<button class="mod" id="gauntlet">Carbon Fiber Gauntlet</button>
-		<button class="mod" id="ram-upgrade">RAM Upgrade</button>
-		<button class="mod" id="immunity-potion">Immunity Potion</button>
-		<button class="mod" id="titanium-armor">Titanium Armor</button>
-		<button id="define-player2">Create second player</button>
-		<button id="begin-battle">BEGIN BATTLE</button>
+	<section id="mod-selection" class="user-selections">
+		<div class="row header">
+			<h1>Choose A Modification!</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-4 evasion">
+				<h2>Boost Evasion</h2>
+				<div class="select-container">
+					<button class="btn mod-btn" id="invisibility-cloak">Invisibility Cloak</button>
+				</div>
+				<div class="select-container">
+					<button class="btn mod-btn" id="wheelie-shoes">Wheelie Shoes</button>
+				</div>
+			</div>
+			<div class="col-md-4 damage">
+				<h2>Boost Damage</h2>
+				<div class="select-container">
+					<button class="btn mod-btn" id="gauntlet">Carbon Fiber Gauntlet</button>
+				</div>
+				<div class="select-container">
+					<button class="btn mod-btn" id="ram-upgrade">RAM Upgrade</button>
+				</div>
+			</div>
+			<div class="col-md-4 protection">
+				<h2>Boost Protection</h2>
+				<div class="select-container">
+					<button class="btn mod-btn" id="immunity-potion">Immunity Potion</button>
+				</div>
+				<div class="select-container">
+					<button class="btn mod-btn" id="titanium-armor">Titanium Armor</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5">
+				<button id="define-player2" class="btn next-screen">Create second player</button>
+				<button id="begin-battle" class="btn next-screen">BEGIN BATTLE</button>
+			</div>
+		</div>
 	</section>
 	<section id="battle-view">
 		<div class="row">
-			<div class="col-md-4" id="player1">Player 1</div>
-			<div class="col-md-4" id="battleground"></div>
-			<div class="col-md-4" id="player2">Player 2</div>
+			<div class="col-md-3 col-md-offset-1 player card" id="player1">Player 1</div>
+			<div class="col-md-4 card" id="battleground"></div>
+			<div class="col-md-3 player card" id="player2">Player 2</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5" id="restart">
+				<button id="restart-game" class="btn next-screen">Play Again</button>
+			</div>
 		</div>
 	</section>
 
@@ -48,6 +153,7 @@
 	<script src="js/robots.js"></script>
 	<script src="js/weapons.js"></script>
 	<script src="js/mods.js"></script>
+	<script src="js/battledome.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
