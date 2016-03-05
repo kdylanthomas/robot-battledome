@@ -1,0 +1,29 @@
+{
+  "name": "robot-battledome-kdylanthomas",
+  "version": "1.0.0",
+  "description": "MJD Quiz - Robot Battledome",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nss-day-cohort-12/robot-battledome-kdylanthomas.git"
+  },
+  "author": "Dylan Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nss-day-cohort-12/robot-battledome-kdylanthomas/issues"
+  },
+  "homepage": "https://github.com/nss-day-cohort-12/robot-battledome-kdylanthomas#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-watch": "^4.3.5",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
+  },
+  "dependencies": {
+    "jquery": "^2.2.1"
+  }
+}
