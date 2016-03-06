@@ -1,7 +1,5 @@
 'use strict';
 
-let robotOptions = [];
-
 // ROBOT PROTOTYPE CHAIN
 
 function Robot (type) {
@@ -74,8 +72,3 @@ function Hal () {
 	this.image = `img/hal.gif`;
 }
 Hal.prototype = new Supercomputer("HAL");
-
-
-robotOptions.push(R2D2, WallE, Bender, C3PO, Watson, Hal);
-
-console.log(robotOptions);

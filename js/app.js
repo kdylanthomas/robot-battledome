@@ -1,4 +1,5 @@
 'use strict';
+
 let battleTimer;
 
 // EVENTS
@@ -29,13 +30,15 @@ $(document).ready(function() {
 
 	// Choose a Weapon -- show weapon selection view
 	$('#choose-weapon').on('click', function(e) {
-		console.log("player1 in submit", player1);
 		if (player1.type) {
-			console.log("you can move on!");
-			$('#weapon-selection').show();
-			$('#weapon-selection').siblings().hide();
+			if (player2.type || !player1.isEquipped) {
+				$('#weapon-selection').show();
+				$('#weapon-selection').siblings().hide();
+			} else {
+				console.log("Player 2 hasn't chosen a robot");
+			}
 		} else {
-			console.log("you didn't choose a robot yet");
+			console.log("Player 1 hasn't chosen a robot");
 		}
 	});
 
@@ -51,24 +54,27 @@ $(document).ready(function() {
 
 	// Choose A Mod -- show modification selection view
 	$('#choose-mod').on('click', function(e) {
-		if (!player1.weapon && !player2.weapon) {
-			console.log("you didn't choose a weapon yet");
-		} else {
-			$('#mod-selection').show();
-			$('#mod-selection').siblings().hide();
-			if (player1.weapon && player2.weapon) {
-				$('#define-player2').hide();
-				$('#begin-battle').show();
+		if (player1.weapon) {
+			if (player2.weapon || !player1.isEquipped) {
+				$('#mod-selection').show();
+				$('#mod-selection').siblings().hide();
+				if (player1.weapon && player2.weapon) {
+					$('#define-player2').hide();
+					$('#begin-battle').show();
+				} else {
+					$('#begin-battle').hide();
+					$('#define-player2').show();
+				}
 			} else {
-				$('#begin-battle').hide();
-				$('#define-player2').show();
+				console.log("Player 2 hasn't chosen a weapon");
 			}
+		} else {
+			console.log("Player 1 has't chosen a weapon");
 		}
 	});
 
 	// Mod Buttons
 	$('.mod-btn').on('click', function(e) {
-		console.log("clicked");
 		let choice = e.target.id;
 		if (!player1.isEquipped) {
 			chooseMod(choice, player1);
@@ -79,14 +85,22 @@ $(document).ready(function() {
 
 	// Define Player 2 -- revert to robot selection view
 	$('#define-player2').on('click', function() {
-		player1.isEquipped = true;
-		$('#robot-selection').show();
-		$('#robot-selection').siblings().hide();
+		if (player1.modification) {
+			player1.isEquipped = true;
+			$('#robot-selection').show();
+			$('#robot-selection').siblings().hide();
+		} else {
+			console.log("Player 1 hasn't chosen a modification");
+		}
 	});
 
 	// Begin Battle -- show battle view
 	$('#begin-battle').on('click', function(e) {
-		player2.isEquipped = true;
+		if (player2.modification) {
+			player2.isEquipped = true;
+		} else {
+			console.log("Player 2 hasn't chosen a modification");
+		}
 		if (player1.isEquipped && player2.isEquipped) {
 			$('#battle-view').show();
 			$('#battle-view').siblings().hide();
@@ -102,8 +116,6 @@ $(document).ready(function() {
 			battleTimer = window.setInterval(() => {
 				trackBattle(player1, player2);
 			}, 3000);
-		} else {
-			console.log("you didn't choose a modification yet");
 		}
 	});
 
@@ -123,9 +135,6 @@ $(document).ready(function() {
 				P1Health = fight(P2, P1);
 				$('#player1 .health').html(`HEALTH: ${P1Health}`);
 			}, 1500);
-		}
-		if (gameOver) {
-			$('#restart').show();
 		}
 	}
 
