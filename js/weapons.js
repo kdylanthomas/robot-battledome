@@ -1,7 +1,5 @@
 'use strict';
 
-let weaponOptions = [];
-
 // WEAPON PROTOTYPE CHAIN
 function Weapon (name) {
 	this.name = name;
@@ -54,6 +52,3 @@ function Mayonnaise () {
 }
 
 Mayonnaise.prototype = new Weapon("Mayonnaise");
-
-weaponOptions.push(LaserGun, ElectricBoomerang, ThrowingStars, Flamethrower, GiantMagnet, Mayonnaise);
-console.log(weaponOptions);

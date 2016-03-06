@@ -29,7 +29,7 @@ describe("core functionality for robot battledome", () => {
 		expect(randomNumber(1, 10)).toMatch('[1-9]|10');
 	});
 	it("should have a fight function that returns a defender's health after an attack", () => {
-		// this test passes when updateBattleground() is not called inside fight()
+		// this test passes when updateBattleground(), clearInterval() are not called inside fight()
 		var attacker = new Robot();
 		attacker.type = new C3PO();
 		attacker.weapon = new Mayonnaise();

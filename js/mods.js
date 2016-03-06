@@ -1,7 +1,5 @@
 'use strict';
 
-let modOptions = [];
-
 // MODIFICATION PROTOTYPE CHAIN
 function Modification (name) {
 	this.name = name;
@@ -55,6 +53,4 @@ function TitaniumArmor () {
 
 TitaniumArmor.prototype = new Modification("Titanium Armor");
 
-modOptions.push(InvisibilityCloak, WheelieShoes, CarbonFiberGauntlet, RAMUpgrade, ImmunityPotion, TitaniumArmor);
-console.log(modOptions);
 

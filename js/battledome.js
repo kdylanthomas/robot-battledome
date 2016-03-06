@@ -7,7 +7,6 @@ let P2Health;
 let evasionPoints;
 let extraDamage;
 let protectionPoints;
-let gameOver = false;
 
 // BUILDER FUNCTIONS
 
@@ -143,7 +142,7 @@ function fight (attacker, defender) {
 		// adjust defender health if less than 0
 		defender.health = 0;
 		// tells app.js to show "Play Again" button
-		gameOver = true;
+		$('#restart').show();
 		window.clearInterval(battleTimer);
 	} else if (protectionPoints === attacker.weapon.damage) {
 		output += `<p>${defender.type.name}'s health remained constant.</p>`;
