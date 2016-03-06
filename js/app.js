@@ -1,6 +1,10 @@
 'use strict';
 
 let battleTimer;
+let player1;
+let player2;
+let P1Health;
+let P2Health;
 
 // EVENTS
 
