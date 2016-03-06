@@ -1,9 +1,5 @@
 'use strict';
 
-let player1;
-let player2;
-let P1Health;
-let P2Health;
 let evasionPoints;
 let extraDamage;
 let protectionPoints;
