@@ -1,0 +1,23 @@
+{
+  "name": "robot-battledome-kdylanthomas",
+  "description": "MJD Quiz - Robot Battledome",
+  "main": "quiz.js",
+  "authors": [
+    "Dylan Thomas"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nss-day-cohort-12/robot-battledome-kdylanthomas",
+  "moduleType": [
+    "es6"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

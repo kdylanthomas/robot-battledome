@@ -1,0 +1,92 @@
+body {
+	background: url('img/background.png');
+	background-repeat: repeat-y;
+	font-family: 'Orbitron', sans-serif;
+}
+
+#start-page {
+	margin-top: 10%;
+}
+
+#game-over {
+	font-weight: 700;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+.next-screen {
+	border-color: #4B4B4B;
+	color: white;
+	background-color: #4B4B4B;
+	width: 200px;
+}
+
+.robot-btn {
+  border-color: #0074D9;
+  color: white;
+  background-color: #0074D9;
+  width: 200px;
+}
+
+.weapon-btn {
+	border-color: #800080;
+	color: white;
+	background-color: #800080;
+	width: 200px;
+}
+
+.mod-btn {
+	border-color: #AF1E1D;
+	color: white;
+	background-color: #AF1E1D;
+	width: 200px;
+}
+
+.hidden {
+	display: none;
+}
+
+#battleground {
+	text-align: center;
+	overflow-y: scroll;
+	background-color: rgba(153,153,153,0.5);
+}
+
+#game-over {
+	font-weight: strong;
+}
+
+.player {
+	border: 2px solid #7F7F7F;
+	border-radius: 5px;
+	background: linear-gradient(#DADADA, #676767);
+}
+
+.player p {
+	color: #E5E5E5;
+	text-align: center;
+}
+
+.robot-img {
+	max-width: 95%;
+	max-height: 300px;
+	margin-bottom: 2%;
+}
+
+.card {
+	height: 500px;
+}
+
+.user-selections {
+	text-align: center;
+}
+
+.next-screen {
+	margin-top: 5%;
+}
+
+.select-container {
+	margin: 5% 0;
+}
